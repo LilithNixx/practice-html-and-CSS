@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+	<title> CSS Grid</title>
+</head>
+<body>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			background: #eeeeee;
+			color: #000;
+			font-family: 'Mochiy Pop P One', sans-serif;
+		}
+
+		.header p {
+			font-size: 50px;
+			text-align: center;
+			padding: 20 px 0;
+		}
+        
+		.contenedor{
+			width: 90%;
+			height: 90%px;
+			max-width: 2000px; /*para que tenga un tamaño máximo*/
+			border: 5px solid grey;
+			margin: auto;
+			font-size: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+         
+         /*Se accede a todos los div dentro del contenedor*/
+		.contenedor > div {
+           display: block;/*Para que ocupen todo el espacio*/
+           padding: 10px;
+           color: white;
+           box-shadow: 2px 2px 10px rgba(0, 0, 0, .25);
+		}
+
+		.contenedor {
+			display: grid; /*Con esto se le da al contenedor las propiedades de una grid
+			GRID-TEMPLATE-COLUMNS: 1fr 2fr 1fr; /*Se pone el tamaño que queremos que abarque cada columna.
+			Tmb se puede poner la función MINMAX( tamaño mínimo, tamaño máximo) para indicar el tamaño máximo y mínimo que queremos que tenga cada celda. 
+			En el máximo se suele poner auto para que se adapte. Esta función se usa más en las filas.
+			Otra función que se usa con las filas y columnas es REPEAT(numero de veces que queremos repetir, tamaño)
+			GRID-TEMPLATE-ROWS: 150px 300px; Modifica el tamaño de cada fila
+			GRID-GAP: 20px; Modifica el tamaño del espacio entre filas y columnas.
+			JUSTIFY-ITEMS:  start/auto/center/stretch/end, alinea las celdas horizontalmente.
+			ALIGN-ITEMS:  start/auto/center/stretch/end, alinea las celdas verticalmente.
+			Podemos usar JUSTYFY-SELF en la clase perteneciente a una de las celdas en particular para modificarla solamente a ella. Lo mismo con ALIGN-SELF.
+			JUSTIFY-CONTENT permite acomodar toda la grilla dentro del contenedor de forma horizontal. Sus valores posibles son:  normal, start, center, end, space-around, space-between, space-evenly.
+			ALIGN-CONTENT sirve para alinear toda la grilla de forma vertical.
+			Estas dos formas de alinear se acomodan a otros tamaños de dispositivo.*/
+            grid-gap: 3px;
+            grid-template-columns: repeat(8, auto-fit);
+            grid-template-rows: repeat(15, 1fr);
+            grid-template-areas: "titulo 	titulo    titulo    titulo    titulo    titulo    titulo    titulo"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad "
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad"
+                                 "hora      actividad actividad actividad actividad actividad actividad actividad";
+
+		}
+
+		/*Para modificar cada área tengo que acceder a cada una de ellas en particular con grid-area: area que quiero que abarque la celda*/
+
+		.contenedor .titulo{
+              background: #bd5f1e;
+              color:#f8efc3;
+              font-size: 20px;
+              align-self: center;
+              grid-area: titulo;
+		}
+
+		.contenedor .texto {
+			 background: #ddad62;
+			 font-size: 20px;
+		}
+
+		.contenedor .hr {
+			background: #f3de99;
+			font-size: 15px;
+		}
+
+		.contenedor .actividad {
+			background:#f3f3f3;
+		}
+
+		/*.contenedor .item1 {
+			background: red;
+			grid-column-start: 2; Esta es una propiedad que se usa para cada item o celda. Indica dónde queremos que comience la columna de esta celda
+			grid-column-end: 2; Con esta propiedad indicamos dónde queremos que la columna de esta celda o item en particular termine. Tmb se le pueden poner números negativos para que siempre abarque todo el espacio que queremos por más que agreguemos más columnas
+			grid-row-start: 1;
+			grid-row-end: 4;
+			Los shorthand de estas propiedades son: grid-column:comienzo/fin y grid-row: comienzo/fin.
+			Tmb puedo usar la palabra span para indicar cuántas columnas o filas quiero que abarque la celda, por ejemplo:  grid-column:  1/ span 3
+		}*/
+
+	</style>
+
+	<div class="header">
+		<p>CSS GRID</p>
+	</div>
+
+	<div class="contenedor">
+		<div class="titulo">HORARIOS</div>
+	    <div class="hr">Hora</div>
+	    <div class="texto">Lunes</div>
+	    <div class="texto">Martes</div>
+	    <div class="texto">Miércoles</div>
+	    <div class="texto">Jueves</div>
+	    <div class="texto">Viernes</div>
+	    <div class="texto">Sábado</div>
+	    <div class="texto">Domingo</div>
+	    <div class="hr">8:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">9:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">10:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">11:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">12:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">13:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">14:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">15:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">16:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">17:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">18:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">19:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">20:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">21:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="hr">22:00</div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	    <div class="actividad"></div>
+	</div>
+</body>
+</html>
