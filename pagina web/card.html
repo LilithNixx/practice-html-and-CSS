@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cards</title>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+
+body{
+	background-color: #fffbf4;
+}
+
+ /*Se modifica la posición de todas las tarjetas.*/
+
+.contenedorDeTarjetas {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/*Título y subtítulo de la página en general*/
+
+.presentacion h1{
+
+	text-align: center;
+	font-family:'Roboto Condensed', sans-serif; 
+	font-size: 100px;
+    padding: 5px;
+    color:#3f0b09;
+}
+
+.presentacion h2{
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif; 
+	font-size:45px;
+	padding: 5px;
+	color: #b70800;
+}
+
+/*Características de todas las imágenes.*/
+img{
+	width: 500px;
+	height: 600px;
+	padding: 40px;
+	border-radius: 5px;
+}
+
+a:hover{
+	color: rgba(2,0,36,1);
+	border: 3px solid grey;
+	padding: 3px;
+}
+
+
+ /*Características de todas las tarjetas.*/
+.tarjeta1{
+	background: rgb(2,0,36);
+    background: linear-gradient(319deg, rgba(2,0,36,1) 0%, rgba(121,94,9,1) 35%, rgba(173,171,24,0.9806451612903225) 100%);
+    padding: 50px;
+    border: 3px solid rgba(2,0,36,1);
+    border-radius: 10px;
+    margin: 50px;
+    height: 1200px;
+    width: 600px;
+    box-shadow: 50px 40px 20px;
+    
+}
+ .tarjeta1:hover{
+	color:#d1bd58;
+	opacity: 0.5;
+}
+
+.tarjeta2{
+	background: rgb(99,219,235);
+    background: linear-gradient(195deg, rgba(99,219,235,1) 0%, rgba(42,128,175,1) 35%, rgba(7,29,97,0.9806451612903225) 100%);
+     padding: 50px;
+    border: 3px solid rgba(7,29,97,0.9806451612903225);
+    border-radius: 10px;
+    margin: 50px;
+    height: 1200px;
+    width: 600px;
+    box-shadow: 50px 40px 20px;
+}
+
+.tarjeta2:hover{
+	color: rgb(99,219,235);
+	opacity: 0.5;
+}
+
+.tarjeta3{
+	background: rgb(233,142,139);
+    background: linear-gradient(195deg, rgba(233,142,139,1) 0%, rgba(184,24,19,1) 35%, rgba(80,6,3,1) 100%);
+     padding: 50px;
+    border: 3px solid rgba(80,6,3,1) 100%);
+    border-radius: 10px;
+    margin: 50px;
+    height: 1200px;
+    width: 600px;
+    box-shadow: 50px 40px 20px;
+}
+
+.tarjeta3:hover{
+	color: rgb(233,142,139);
+	opacity: 0.5;
+}
+.tarjeta4{
+
+	background: rgb(140,236,202);
+    background: linear-gradient(195deg, rgba(140,236,202,1) 0%, rgba(12,212,142,1) 35%, rgba(3,80,53,1) 100%);
+    padding: 50px;
+    border: 3px solid rgba(3,80,53,1) 100%);
+    border-radius: 10px;
+    margin: 50px;
+    height: 1200px;
+    width: 600px;
+    box-shadow: 50px 40px 20px;
+}
+
+.tarjeta4:hover{
+	color: rgb(140,236,202);
+	opacity: 0.5;
+}
+/* Características de la tarjeta 1.*/
+
+ .tarjeta1__tit1{
+	font-family: 'Island Moments', cursive;
+	font-size: 100px;
+	text-align: center;
+	color: rgba(2,0,36,1);
+	border: 3px solid rgba(2,0,36,1);
+	margin-top: 5px;
+}
+
+.tarjeta1__p1{
+    margin: 3px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Island Moments', cursive;
+    font-size: 70px;
+}
+
+.tarjeta1__a1{
+	text-decoration: none;
+	color: rgba(121,94,9,1);
+}
+
+
+/* Características de la tarjeta 2.*/
+
+ .tarjeta2__tit2{
+	font-family: 'Pushster', cursive;
+	font-size: 70px;
+	text-align: center;
+	color: rgba(7,29,97,0.9806451612903225);
+	border: 3px solid rgba(7,29,97,0.9806451612903225);
+	margin-top: 5px;
+	 background: rgb(99,219,235);
+     background: linear-gradient(195deg, rgba(99,219,235,1) 0%, rgba(42,128,175,1) 35%, rgba(50,232,233,0.9806451612903225) 100%);
+}
+
+
+.tarjeta2__p2{
+    margin: 3px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Pushster', cursive;
+    font-size: 30px;
+}
+
+.tarjeta2__a2{
+	text-decoration: none;
+	color: rgba(42,128,175,1);
+}
+
+/*Características de la tarjeta 3.*/
+.tarjeta3__tit3{
+    font-size: 70px;
+	text-align: center;
+	color: rgba(184,24,19,1)
+	border: 3px solid rgba(184,24,19,1);
+	margin-top: 5px;
+}
+
+.tarjeta3__a3{
+	text-decoration: none;
+	color: rgba(184,24,19,1);
+}
+
+.tarjeta3__p3{
+	 margin: 3px;
+    padding: 5px;
+    text-align: center;
+     font-size: 30px;
+}
+
+/*Características de la tarjeta 4*/
+
+.tarjeta4__tit4{
+	font-family:  'Dancing Script', cursive;
+	 font-size: 70px;
+	text-align: center;
+	color: #132e0d;
+	margin-top: 5px;
+}
+
+.tarjeta4__p4{
+	margin: 3px;
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.tarjeta4__a4{
+	text-decoration: none;
+	color: #132e0d;
+}
+
+</style>
+
+<body>
+	<div class="presentacion">
+		<h1>Galería de postales.</h1>
+		<h2>Postales con imágenes y frases de todo tipo.</h2>
+	</div>
+    <div class="contenedorDeTarjetas">
+    	<div class="tarjeta1">
+		<img class="tarjeta1__im1" src="añonuevo.jpg" alt="añonuevo" title="Año nuevo">
+		<h1 class="tarjeta1__tit1"><b>Feliz 2022</b></h1>
+		<p class="tarjeta1__p1">"Aprende de ayer, vive para hoy, espera para mañana."
+			<br>
+			<a class="tarjeta1__a1" href="https://es.wikipedia.org/wiki/Albert_Einstein"><cite>Albert Einstein</cite></a>
+		</p>
+
+	</div>
+
+	<div class="tarjeta2">
+		
+		<img class="tarjeta2__im2" src="vacaciones.jpg" alt="vacaciones" title="vacaciones">
+		<h1 class="tarjeta2__tit2"><b>¡Felices vacaciones!</b></h1>
+		<p class="tarjeta2__p2">"El que no tiene dos terceras partes de la jornada para sí mismo, es un esclavo, sea lo que sea, político, comerciante, funcionario o erudito."
+			<br>
+			<a class="tarjeta2__a2" href="https://es.wikipedia.org/wiki/Friedrich_Nietzsche"><cite>Friedrich Nietsche</cite></a>
+		</p>
+
+	</div>
+
+	<div class="tarjeta3">
+		<img class="tarjeta3__im3" src="cumpleaños.png" alt="cumpleaños" title="cumpleaños">
+        <h1 class="tarjeta3__tit3"><b>¡Qué tengas un gran día!</b></h1>
+        <p class="tarjeta3__p3">"Todas las edades tienen sus frutos, pero hay que saberlos cosechar."</p>
+        <br>
+        <a class="tarjeta3__a3" href="https://es.wikipedia.org/wiki/Raymond_Radiguet"><cite>Raymond Radiguet</cite></a>
+	</div>
+
+	<div class="tarjeta4">
+		<img class="tarjeta4__im4" src="aniversario.jpg" alt="aniversario" title="aniversario">
+		<h1 class="tarjeta4__tit4"><b>Feliz aniversario.</b></h1>
+		<p class="tarjeta4__p4">"Nuestro amor es eterno; el aspecto puede cambiar, pero no la esencia"</p>
+		<br>
+		<a class="tarjeta4__a4" href="https://es.wikipedia.org/wiki/Vincent_van_Gogh"><cite>Vincent Van Gogh</cite></a>
+
+	</div>
+  </div> 
+	
+          
+
+</body>
+</html>

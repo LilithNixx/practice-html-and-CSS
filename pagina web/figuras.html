@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Triángulos</title>
+</head>
+<body>
+
+<style>
+	body{
+		background-color: grey;
+	}
+	.contenedor_t{
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.contenedor_t div{
+		margin: 20px;
+	}
+
+	.tri_arriba{
+		width: 0;
+		height: 0;
+
+		border-left: 70px solid transparent;
+		border-right: 70px solid transparent;
+		border-bottom: 70px solid black;
+	}
+
+	.tri_abajo{
+		width: 0;
+		height: 0;
+
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
+		border-top: 40px solid blue;
+	}
+
+	.tri_derecha{
+		width: 0;
+		height: 0;
+
+		border-top: 100px solid transparent;
+		border-bottom:100px solid transparent;
+		border-left: 100px solid red;
+	}
+
+	.tri_izquierda{
+		width: 0;
+		height: 0;
+
+		border-top: 60px solid transparent;
+		border-bottom: 60px solid transparent;
+		border-right: 60px solid green;
+	}
+
+	.tri_izquierda2{
+		width: 0;
+		height: 0;
+
+		border-top: 60px solid transparent;
+		border-bottom: 60px solid transparent;
+		border-right: 150px solid orange;
+	}
+
+	.tri_arriba2{
+		width: 0;
+		height: 0;
+
+		border-left: 280px solid transparent;
+		border-right: 0px solid transparent;
+		border-bottom: 200px solid #b78bf4;
+	}
+
+	.contenedor_c{
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.contenedor_c div{
+		margin: 20px;
+	}
+
+	.cua1{
+		width: 50px;
+		height:50px;
+		border: 4px solid #d6ff69;
+		background-color: #fffb9d;
+		box-shadow: -20px 30px 20px 5px #58ea4a;
+	}
+
+	.cua2{
+		width: 100px;
+		height:200px;
+		border: 4px solid#103353;
+		background-color: #07bcff;
+		box-shadow: 10px -10px 15px #103353;
+	}
+
+	.cua3{
+		width: 300px;
+		height: 150px;
+		border: 4px solid#8f2a60;
+		border-style: dashed;
+		background-color: #ff6cb1;
+		box-shadow: 0 -8px 15px 8px #601e46;
+	}
+
+	.cua4{
+		width: 150px;
+		height: 300px;
+		border-top: 4px solid #e6ffd0;
+		border-bottom: 5px solid #f77826;
+		border-left: 6px solid #f3f88d;
+		border-right: 7px solid #f6bd48;
+		border-style: dotted;
+        background-color: #f82741;
+	}
+
+	.contenedor_cir{
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.contenedor_cir div{
+		margin: 20px;
+	}
+
+	.cir1{
+		width: 200px;
+		height: 200px;
+		border: 4px solid #c47a30;
+		background-color: #642a17;
+		border-radius: 50%;
+		box-shadow: 25px 5px 30px #42160c;
+	}
+
+	.cir2{
+		width: 200px;
+		height: 400px;
+		border: 2px solid #0a232a;
+		background-color: #2a6872;
+		border-radius: 50%;
+		box-shadow: 30px -25px 30px 10px #0a232a;
+	}
+
+	.cir3{
+		width: 400px;
+		height:200px;
+		border: 3px solid #cea1c8;
+		background-color: #f8e6e7;
+		border-radius: 60%;
+		box-shadow: 0 0 20px 20px #cea1c8;
+	} 
+
+	.otras_fig{
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.otras_fig div{
+		margin: 20px;
+	}
+
+	.fig1{
+		width: 0;
+		height: 0;
+		border-right: 200px solid green;
+		border-left: 200px solid orange;
+		border-top: 50px solid yellow;
+		border-bottom: 200px solid red;
+		box-shadow: 20px 20px 20px 10px navy;
+	}
+
+	.fig2{
+		width: 0;
+		height: 0;
+		border-left: 100px solid transparent;
+		border-top: 100px solid transparent;
+		border-right: 100px solid transparent;
+		border-bottom:200px solid #ff3ea9;
+		border-radius: 50%;
+	}
+
+	.fig3{
+
+		width: 200px;
+		height: 350px;
+		border: 3px solid #20aad8;
+		box-shadow: 20px 30px 20px 15px rgb(0,0,0, 0.6);
+        background-image:url(SailorMercury.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+	}
+
+</style>
+
+
+<div class="contenedor_t">
+	<div class="tri_arriba"></div>
+    <div class="tri_abajo"></div>
+    <div class="tri_derecha"></div>
+    <div class="tri_izquierda"></div>
+    <div class="tri_izquierda2"></div>
+    <div class="tri_arriba2"></div>
+</div>
+
+<div class="contenedor_c">
+	<div class="cua1"></div>
+	<div class="cua2"></div>
+	<div class="cua3"></div>
+	<div class="cua4"></div>
+</div>
+
+<div class="contenedor_cir">
+	<div class="cir1"></div>
+	<div class="cir2"></div>
+	<div class="cir3"></div>
+</div>
+
+<div class="otras_fig">
+	<div class="fig1"></div>
+	<div class="fig2"></div>
+	<div class="fig3"></div>
+</div>
+
+</body>
+</html>
